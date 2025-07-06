@@ -12,7 +12,6 @@
 
   border-width: 2px;
   border-style: solid;
-  background-color: rgba($color-white, 0.1);
 
   &:hover,
   &:focus {
@@ -21,6 +20,7 @@
 
   &--light {
     border-color: $color-white;
+    background-color: rgba($color-white, 0.1);
 
     @include lg-min {
       min-width: 250px;
@@ -39,6 +39,16 @@
   }
 
   &--primary {
+    min-width: 350px;
+    min-height: 60px;
+
+    border-color: $color-primary;
+    background-color: rgba($color-primary, 0.8);
+
     font-size: 1.125rem;
   }
+}
+
+.visually-hidden {
+  @include visually-hidden;
 }

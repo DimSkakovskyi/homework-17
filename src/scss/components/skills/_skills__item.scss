@@ -1,1 +1,42 @@
 @use "../../abstracts" as *;
+
+.skills__item {
+  position: relative;
+
+  &-title {
+    z-index: 1;
+
+    margin: 0;
+
+    @include abs-position;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: $gap;
+  }
+
+  &-image {
+    background-color: $color-primary;
+    background-position: center;
+    background-size: cover;
+
+    @include abs-position;
+  }
+
+  &-overlay {
+    background-color: rgba($color-primary, 0.8);
+
+    @include abs-position;
+  }
+}
+
+@for $i from 1 through 9 {
+  .skills__item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}
