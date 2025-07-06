@@ -8,6 +8,9 @@
 
     grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
     @include unlist(0 (-$gap-sm) 0 0);
+    @include md {
+      display: none;
+    }
   }
 
   &-link {

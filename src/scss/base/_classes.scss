@@ -5,8 +5,6 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 250px;
-  min-height: 60px;
   padding: 0.5em 1em;
 
   transition: background-color 0.3s;
@@ -14,13 +12,34 @@
 
   border-width: 2px;
   border-style: solid;
-  border-color: $color-white;
   background-color: rgba($color-white, 0.1);
-
-  font-size: 18px;
 
   &:hover,
   &:focus {
     background-color: $color-accent;
+  }
+
+  &--light {
+    border-color: $color-white;
+
+    @include lg-min {
+      font-size: 1.125rem;
+      min-width: 250px;
+      min-height: 60px;
+    }
+
+    @include lg-md {
+      min-width: 200px;
+      min-height: 50px;
+    }
+
+    @include md {
+      min-width: 170px;
+      min-height: 40px;
+    }
+  }
+
+  &--primary {
+    font-size: 1.125rem;
   }
 }
