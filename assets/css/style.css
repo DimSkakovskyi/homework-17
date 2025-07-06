@@ -188,6 +188,10 @@ h2{
   line-height:1.2;
 }
 
+h3{
+  font-family:"Roboto Slab", serif;
+}
+
 a{
   text-decoration:none;
   color:#ffffff;
@@ -218,11 +222,11 @@ a{
   background-color:rgba(255, 255, 255, 0.1);
 }
 .btn--primary{
+  min-width:350px;
+  min-height:60px;
   border-color:#2d3651;
   background-color:rgba(45, 54, 81, 0.8);
   font-size:1.125rem;
-  min-height:60px;
-  min-width:350px;
 }
 
 .visually-hidden{
@@ -335,11 +339,11 @@ a{
 }
 .skills__container{
   display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  grid-template-areas:"a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-  grid-auto-rows:calc(33.33333vh - 13.3333333333px);
   gap:10px;
   margin-bottom:20px;
+  grid-auto-rows:calc(33.33333vh - 13.3333333333px);
+  grid-template-areas:"a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+  grid-template-columns:repeat(4, 1fr);
 }
 .skills__actions{
   display:-webkit-box;
@@ -355,13 +359,16 @@ a{
   position:relative;
 }
 .skills__item-title{
+  font-size:1.25rem;
+  letter-spacing:0.1em;
+  font-family:"Roboto", sans-serif;
+  z-index:1;
+  margin:0;
   position:absolute;
   top:0;
   right:0;
   bottom:0;
   left:0;
-  margin:0;
-  z-index:1;
 }
 .skills__item-link{
   display:-webkit-box;
@@ -387,12 +394,23 @@ a{
   left:0;
 }
 .skills__item-overlay{
+  background-color:rgba(45, 54, 81, 0.8);
   position:absolute;
   top:0;
   right:0;
   bottom:0;
   left:0;
-  background-color:rgba(45, 54, 81, 0.8);
+}
+.skills__item:hover .skills__item-overlay{
+  opacity:0.95;
+}
+.skills__item:hover .skills__item-image{
+  -webkit-transform:scale(1.1);
+      -ms-transform:scale(1.1);
+          transform:scale(1.1);
+}
+.skills__item:hover .skills__item-link{
+  color:#d66926;
 }
 
 .skills__item:nth-of-type(1){

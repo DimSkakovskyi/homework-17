@@ -8,6 +8,11 @@
 
     margin: 0;
 
+    letter-spacing: 0.1em;
+
+    font-family: $font-main;
+    font-size: 1.25rem;
+
     @include abs-position;
   }
 
@@ -32,6 +37,22 @@
     background-color: rgba($color-primary, 0.8);
 
     @include abs-position;
+  }
+
+  &:hover {
+    .skills__item {
+      &-overlay {
+        opacity: 0.95;
+      }
+
+      &-image {
+        transform: scale(1.1);
+      }
+
+      &-link {
+        color: $color-accent;
+      }
+    }
   }
 }
 
