@@ -1,293 +1,274 @@
 @use "variables" as *;
 @use "skin" as *;
 
-/* Шаблонна функція для генерації медіа-запитів */
-@mixin media-between($min, $max) {
-  @media (min-width: #{$min}) and (max-width: #{$max}) {
-    @content;
-  }
-}
-
-@mixin media-max($max) {
-  @media (max-width: #{$max}) {
-    @content;
-  }
-}
-
-@mixin media-min($min) {
-  @media (min-width: #{$min}) {
-    @content;
-  }
-}
-
-/* UL */
+/* ul */
 @mixin ul-min {
-  @include media-min($ul) {
+  @media (#{$ul} <= width) {
     @content;
   }
 }
 
 @mixin ul {
-  @include media-max($ul - 1px) {
+  @media (width < #{$ul}) {
     @content;
   }
 }
 
 @mixin ul-xl {
-  @include media-between($xl, $ul - 1px) {
+  @media (#{$xl} <= width < #{$ul}) {
     @content;
   }
 }
 
 @mixin ul-lg {
-  @include media-between($lg, $ul - 1px) {
+  @media (#{$lg} <= width < #{$ul}) {
     @content;
   }
 }
 
 @mixin ul-md {
-  @include media-between($md, $ul - 1px) {
+  @media (#{$md} <= width < #{$ul}) {
     @content;
   }
 }
 
 @mixin ul-sm {
-  @include media-between($sm, $ul - 1px) {
+  @media (#{$sm} <= width < #{$ul}) {
     @content;
   }
 }
 
 @mixin ul-xs {
-  @include media-between($xs, $ul - 1px) {
+  @media (#{$xs} <= width < #{$ul}) {
     @content;
   }
 }
 
 @mixin ul-vs {
-  @include media-between($vs, $ul - 1px) {
+  @media (#{$vs} <= width < #{$ul}) {
     @content;
   }
 }
 
 @mixin ul-us {
-  @include media-between($us, $ul - 1px) {
+  @media (#{$us} <= width < #{$ul}) {
     @content;
   }
 }
 
-/* XL */
+/* xl */
 @mixin xl-min {
-  @include media-min($xl) {
+  @media (#{$xl} <= width) {
     @content;
   }
 }
 
 @mixin xl {
-  @include media-max($xl - 1px) {
+  @media (width < #{$xl}) {
     @content;
   }
 }
 
 @mixin xl-lg {
-  @include media-between($lg, $xl - 1px) {
+  @media (#{$lg} <= width < #{$xl}) {
     @content;
   }
 }
 
 @mixin xl-md {
-  @include media-between($md, $xl - 1px) {
+  @media (#{$md} <= width < #{$xl}) {
     @content;
   }
 }
 
 @mixin xl-sm {
-  @include media-between($sm, $xl - 1px) {
+  @media (#{$sm} <= width < #{$xl}) {
     @content;
   }
 }
 
 @mixin xl-xs {
-  @include media-between($xs, $xl - 1px) {
+  @media (#{$xs} <= width < #{$xl}) {
     @content;
   }
 }
 
 @mixin xl-vs {
-  @include media-between($vs, $xl - 1px) {
+  @media (#{$vs} <= width < #{$xl}) {
     @content;
   }
 }
 
 @mixin xl-us {
-  @include media-between($us, $xl - 1px) {
+  @media (#{$us} <= width < #{$xl}) {
     @content;
   }
 }
 
-/* LG */
+/* lg */
 @mixin lg-min {
-  @include media-min($lg) {
+  @media (#{$lg} <= width) {
     @content;
   }
 }
 
 @mixin lg {
-  @include media-max($lg - 1px) {
+  @media (width < #{$lg}) {
     @content;
   }
 }
 
 @mixin lg-md {
-  @include media-between($md, $lg - 1px) {
+  @media (#{$md} <= width < #{$lg}) {
     @content;
   }
 }
 
 @mixin lg-sm {
-  @include media-between($sm, $lg - 1px) {
+  @media (#{$sm} <= width < #{$lg}) {
     @content;
   }
 }
 
 @mixin lg-xs {
-  @include media-between($xs, $lg - 1px) {
+  @media (#{$xs} <= width < #{$lg}) {
     @content;
   }
 }
 
 @mixin lg-vs {
-  @include media-between($vs, $lg - 1px) {
+  @media (#{$vs} <= width < #{$lg}) {
     @content;
   }
 }
 
 @mixin lg-us {
-  @include media-between($us, $lg - 1px) {
+  @media (#{$us} <= width < #{$lg}) {
     @content;
   }
 }
 
-/* MD */
+/* md */
 @mixin md-min {
-  @include media-min($md) {
+  @media (#{$md} <= width) {
     @content;
   }
 }
 
 @mixin md {
-  @include media-max($md - 1px) {
+  @media (width < #{$md}) {
     @content;
   }
 }
 
 @mixin md-sm {
-  @include media-between($sm, $md - 1px) {
+  @media (#{$sm} <= width < #{$md}) {
     @content;
   }
 }
 
 @mixin md-xs {
-  @include media-between($xs, $md - 1px) {
+  @media (#{$xs} <= width < #{$md}) {
     @content;
   }
 }
 
 @mixin md-vs {
-  @include media-between($vs, $md - 1px) {
+  @media (#{$vs} <= width < #{$md}) {
     @content;
   }
 }
 
 @mixin md-us {
-  @include media-between($us, $md - 1px) {
+  @media (#{$us} <= width < #{$md}) {
     @content;
   }
 }
 
-/* SM */
+/* sm */
 @mixin sm-min {
-  @include media-min($sm) {
+  @media (#{$sm} <= width) {
     @content;
   }
 }
 
 @mixin sm {
-  @include media-max($sm - 1px) {
+  @media (width < #{$sm}) {
     @content;
   }
 }
 
 @mixin sm-xs {
-  @include media-between($xs, $sm - 1px) {
+  @media (#{$xs} <= width < #{$sm}) {
     @content;
   }
 }
 
 @mixin sm-vs {
-  @include media-between($vs, $sm - 1px) {
+  @media (#{$vs} <= width < #{$sm}) {
     @content;
   }
 }
 
 @mixin sm-us {
-  @include media-between($us, $sm - 1px) {
+  @media (#{$us} <= width < #{$sm}) {
     @content;
   }
 }
 
-/* XS */
+/* xs */
 @mixin xs-min {
-  @include media-min($xs) {
+  @media (#{$xs} <= width) {
     @content;
   }
 }
 
 @mixin xs {
-  @include media-max($xs - 1px) {
+  @media (width < #{$xs}) {
     @content;
   }
 }
 
 @mixin xs-vs {
-  @include media-between($vs, $xs - 1px) {
+  @media (#{$vs} <= width < #{$xs}) {
     @content;
   }
 }
 
 @mixin xs-us {
-  @include media-between($us, $xs - 1px) {
+  @media (#{$us} <= width < #{$xs}) {
     @content;
   }
 }
 
-/* VS */
+/* vs */
 @mixin vs-min {
-  @include media-min($vs) {
+  @media (#{$vs} <= width) {
     @content;
   }
 }
 
 @mixin vs {
-  @include media-max($vs - 1px) {
+  @media (width < #{$vs}) {
     @content;
   }
 }
 
 @mixin vs-us {
-  @include media-between($us, $vs - 1px) {
+  @media (#{$us} <= width < #{$vs}) {
     @content;
   }
 }
 
-/* US */
+/* us */
 @mixin us-min {
-  @include media-min($us) {
+  @media (#{$us} <= width) {
     @content;
   }
 }
 
 @mixin us {
-  @include media-max($us - 1px) {
+  @media (width < #{$us}) {
     @content;
   }
 }
