@@ -1,0 +1,22 @@
+@use "../../abstracts" as *;
+
+.header__content {
+  position: relative;
+  z-index: 1;
+
+  &-container {
+    @extend %container;
+  }
+
+  &-title {
+    margin: 0 0 53px 0;
+
+    text-align: center;
+  }
+
+  &-actions {
+    display: flex;
+    gap: $gap;
+    justify-content: center;
+  }
+}

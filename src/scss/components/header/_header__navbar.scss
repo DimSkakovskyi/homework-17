@@ -1,0 +1,28 @@
+@use "../../abstracts" as *;
+
+.header__navbar {
+  &-list {
+    display: grid;
+    gap: $gap;
+    justify-content: end;
+
+    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
+    @include unlist(0 (-$gap-sm) 0 0);
+  }
+
+  &-link {
+    display: block;
+
+    padding: $gap $gap-sm;
+
+    transition: color 0.3s;
+    letter-spacing: 0.09em;
+
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+}
