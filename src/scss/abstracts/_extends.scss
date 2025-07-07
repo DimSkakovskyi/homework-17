@@ -25,3 +25,14 @@
     padding-bottom: $gap-x3;
   }
 }
+
+%form-element {
+  width: 100%;
+  align-items: center;
+  height: 60px;
+  border: 2px solid transparent;
+  border-bottom-color: rgba($color-white, 0.5);
+  background-color: rgba($color-white, 0.05);
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+}
