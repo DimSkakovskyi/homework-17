@@ -10,9 +10,6 @@
     @extend %container;
   }
 
-  &__title {
-  }
-
   &__form {
     display: grid;
     gap: $gap;
