@@ -7,21 +7,56 @@
     justify-content: end;
 
     grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
-    @include unlist(0 (-$gap-sm) 0 0);
+    @include md-min {
+      @include unlist(0 (-$gap-sm) 0 0);
+    }
     @include md {
+      position: absolute;
+      top: 100%;
+      right: $gap;
+      
       display: none;
+      overflow: hidden;
+      text-align: right;
+
+      @include box-shadow;
+
+      @include unlist;
+
+      &::before {
+        position: absolute;
+        z-index: -1;
+        top: -$gap;
+        right: -$gap;
+        bottom: -$gap;
+        left: -$gap;
+        content: "";
+        background-color: rgba($color-gray-dark, 0.25);
+        backdrop-filter: blur(5px);
+      }
+    }
+  }
+
+  &-item {
+    @include md {
+      margin: $gap;
     }
   }
 
   &-link {
     display: block;
 
-    padding: $gap $gap-sm;
-
     transition: color 0.3s;
     letter-spacing: 0.09em;
 
-    font-size: 18px;
+    font-size: 1.125rem;
+
+    @include md-min {
+      padding: $gap $gap-sm;
+    }
+    @include md {
+      padding: $gap-sm $gap;
+    }
 
     &:hover,
     &:focus {
