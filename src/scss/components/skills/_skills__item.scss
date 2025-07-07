@@ -3,6 +3,8 @@
 .skills__item {
   position: relative;
 
+  overflow: hidden;
+
   &-title {
     z-index: 1;
 
@@ -11,9 +13,14 @@
     letter-spacing: 0.1em;
 
     font-family: $font-main;
-    font-size: 1.25rem;
 
     @include abs-position;
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md {
+      font-size: 1.125rem;
+    }
   }
 
   &-link {
@@ -23,9 +30,13 @@
 
     height: 100%;
     padding: $gap;
+
+    transition: color 0.3s;
   }
 
   &-image {
+    transition: transform 0.3s;
+
     background-color: $color-primary;
     background-position: center;
     background-size: cover;
@@ -34,6 +45,8 @@
   }
 
   &-overlay {
+    transition: opacity 0.3s;
+
     background-color: rgba($color-primary, 0.8);
 
     @include abs-position;

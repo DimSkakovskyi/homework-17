@@ -28,4 +28,76 @@
       color: $color-accent;
     }
   }
+
+
+  &-btn {
+    position: relative;
+
+    display: block;
+
+    width: 30px;
+    height: 22.5px;
+    margin-left: auto;
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+
+    border: none;
+    background: none;
+
+    @include md-min {
+      display: none;
+    }
+
+    &-row {
+      position: absolute;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 3px;
+
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+
+      opacity: 1;
+      border-radius: 3px;
+      background: $color-white;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 9px;
+      }
+
+      &:nth-child(4) {
+        top: 17.5px;
+      }
+    }
+
+    &.active {
+      .header__navbar-btn-row {
+        &:nth-child(1),
+        &:nth-child(4) {
+          top: 9px;
+          left: 50%;
+
+          width: 0;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 }
